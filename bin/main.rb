@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-
 # !/usr/bin/env ruby
+
 puts ''
 print '                 TIC TAC TOE'
 puts '
@@ -28,19 +28,19 @@ puts "            ===============LET'S PLAY!==============="
 puts "#{player_one} make your move"
 puts 'Select a position from [1, 2, 3, 4, 5, 6, 7, 8, 9]'
 position = gets.chomp
-puts "#{player_one} the move you made is invalid,  please try again!"
-position = gets.chomp
+# puts "#{player_one} the move you made is invalid,  please try again!"
+# position = gets.chomp
 puts '
-_________________
-|     |     |     |
-|  1  |  2  |  3  |
-|_____|_____|_____|
-|     |     |     |
-|  4  |  5  |  6  |
-|_____|_____|_____|
-|     |     |     |
-|  7  |  8  |  9  |
-|_____|_____|_____|
+               _________________
+              |     |     |     |
+              |  1  |  2  |  3  |
+              |_____|_____|_____|
+              |     |     |     |
+              |  4  |  5  |  6  |
+              |_____|_____|_____|
+              |     |     |     |
+              |  7  |  8  |  9  |
+              |_____|_____|_____|
 '
 puts ''
 puts "Congs #{player_one}, you are the winner!"
