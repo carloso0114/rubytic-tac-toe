@@ -26,7 +26,7 @@ puts "            ===============LET'S PLAY!==============="
 puts "#{player_one} make your move"
 puts 'Select a position from [1, 2, 3, 4, 5, 6, 7, 8, 9]'
 position=gets.chomp
-puts "#{player_one} the move you made is invalid, please try again!"
+puts "#{player_one} the move you made is invalid,  please try again!"
 position=gets.chomp
 puts '
 _________________
