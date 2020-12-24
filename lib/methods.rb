@@ -1,5 +1,3 @@
-private
-
 def gap
     2.times { puts '' }
 end
