@@ -35,4 +35,4 @@ def print_board(new_game)
                 |     |     |     |
                 |  #{new_game.board[2][0]}  |  #{new_game.board[2][1]}  |  #{new_game.board[2][2]}  |
                 |_____|_____|_____|"
-  end
+end
