@@ -79,3 +79,5 @@ class Game
     true
   end
 end
+
+# rubocop:Enable Metrics/CyclomaticComplexity
