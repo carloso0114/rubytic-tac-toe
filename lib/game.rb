@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/CyclomaticComplexity
 class Game
   attr_reader :board
 
@@ -80,4 +81,4 @@ class Game
   end
 end
 
-# rubocop:Enable Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/CyclomaticComplexity
