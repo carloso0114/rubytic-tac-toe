@@ -1,8 +1,7 @@
 # !/usr/bin/env ruby
 
-#require the files that contains classes and methods
-require_relative '../lib/player.rb'
-require_relative '../lib/game.rb'
+require_relative '../lib/game'
+require_relative '../lib/player'
 
 new_game = Game.new
 new_game.reset_board
