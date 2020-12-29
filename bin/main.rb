@@ -3,7 +3,6 @@
 #require the files that contains classes and methods
 require_relative '../lib/player.rb'
 require_relative '../lib/game.rb'
-require_relative '../lib/methods.rb'
 
 p1 = Player.new('', 'X')
 p2 = Player.new('', 'O')
@@ -12,6 +11,42 @@ new_game.reset_board
 game_ended = false
 turn = true
 positions = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+def gap
+  2.times { puts '' }
+end
+
+def valid_name?(name)
+  return true unless name.empty?
+
+  false
+end
+
+def prompt_user(new_player, code)
+  loop do
+    print "Player #{code} enter your name: "
+    new_player.name = gets.chomp.strip
+    if valid_name?(new_player.name)
+      puts "#{new_player.name} your symbol is #{new_player.symbol}"
+      break
+    else
+      puts 'Invalid name, try again'
+    end
+  end
+end
+
+def print_board(new_game)
+  puts "                 _________________
+                |     |     |     |
+                |  #{new_game.board[0][0]}  |  #{new_game.board[0][1]}  |  #{new_game.board[0][2]}  |
+                |_____|_____|_____|
+                |     |     |     |
+                |  #{new_game.board[1][0]}  |  #{new_game.board[1][1]}  |  #{new_game.board[1][2]}  |
+                |_____|_____|_____|
+                |     |     |     |
+                |  #{new_game.board[2][0]}  |  #{new_game.board[2][1]}  |  #{new_game.board[2][2]}  |
+                |_____|_____|_____|"
+end
 
 gap
 print '      TIC TAC TOE'
