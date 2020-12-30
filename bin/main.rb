@@ -1,4 +1,4 @@
-# !/usr/bin/env ruby
+#!/usr/bin/env ruby
 
 #require the files that contains classes and methods
 require_relative '../lib/player.rb'
