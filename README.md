@@ -60,7 +60,7 @@ LinkedIn: [Carlos Ospina](https://www.linkedin.com/in/carlos-ospina-242b831a6/)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/NataJenkins/TicTacToe/issues).
+Feel free to check the [issues page](https://github.com/carloso0114/rubytic-tac-toe/issues).
 
 ## Show your support
 
@@ -72,4 +72,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](https://github.com/carloso0114/rubytic-tac-toe/blob/readme_game_instructions/LICENSE) licensed.
