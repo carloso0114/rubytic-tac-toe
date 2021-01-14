@@ -4,7 +4,7 @@ require_relative '../lib/player'
 describe Game do
   let(:new_game) { Game.new }
   describe '#win?' do
-    context 'when player has one straight line/diagonal/column line on the board' do
+    context 'when player has one straight line/diagonal on the board' do
       it 'return true if a row has equal values' do
         new_game
         new_game.reset_board
@@ -28,6 +28,24 @@ describe Game do
         new_game.update_board([1, 1], 'O')
         new_game.update_board([2, 0], 'O')
         expect(new_game.win?).to be_truthy
+      end
+    end
+    context 'when player has not one straight line/diagonal on the board' do
+      it 'return false if no straight line/diagonal has equal values' do
+        new_game
+        new_game.reset_board
+        new_game.update_board([2, 0], 'O')
+        new_game.update_board([2, 1], 'O')
+        new_game.update_board([1, 2], 'O')
+        expect(new_game.win?).to be_falsey
+      end
+      it 'return false if no straight line/diagonal has equal values' do
+        new_game
+        new_game.reset_board
+        new_game.update_board([2, 0], 'O')
+        new_game.update_board([0, 1], 'O')
+        new_game.update_board([0, 2], 'O')
+        expect(new_game.win?).to be_falsey
       end
     end
   end
@@ -91,32 +109,6 @@ describe Game do
       new_game.reset_board
       new_game.update_board([2, 1], 'O')
       expect(new_game.board).to eql([[1, 2, 3], [4, 5, 6], [7, 'O', 9]])
-    end
-  end
-  describe '#win?' do
-    it 'return true if a row/column/diagonal has equal values' do
-      new_game
-      new_game.reset_board
-      new_game.update_board([2, 0], 'O')
-      new_game.update_board([2, 1], 'O')
-      new_game.update_board([2, 2], 'O')
-      expect(new_game.win?).to be_truthy
-    end
-    it 'return true if a row/column/diagonal has equal values' do
-      new_game
-      new_game.reset_board
-      new_game.update_board([0, 1], 'O')
-      new_game.update_board([1, 1], 'O')
-      new_game.update_board([2, 1], 'O')
-      expect(new_game.win?).to be_truthy
-    end
-    it 'return true if a row/column/diagonal has equal values' do
-      new_game
-      new_game.reset_board
-      new_game.update_board([0, 2], 'O')
-      new_game.update_board([1, 1], 'O')
-      new_game.update_board([2, 0], 'O')
-      expect(new_game.win?).to be_truthy
     end
   end
   describe '#draw?' do
